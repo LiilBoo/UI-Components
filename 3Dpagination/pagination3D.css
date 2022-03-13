@@ -1,0 +1,59 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
+
+body{
+    background-color: #263552;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 50px;
+    width: 90%;
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a{
+    height: 30px;
+    width: 30px;
+    background-image: linear-gradient(
+        to bottom,
+        #2d425a,
+        #283853
+    );
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 1.5px 2px 1.5px rgba(30, 41, 68, 0.7);
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.active {
+    background-image: none;
+    background-color: #1e2944;
+    box-shadow: inset 0 1.5px 3px 0 rgba(16, 21, 35, 0.7);
+}
+
+    :hover:not(.active){
+        color: #80dfff;
+        text-shadow: 0 0 1.2px #80dfff;
+        font-size: 16px;
+    }
+
+.fa-solid{
+    color: white;
+    font-size: 10px;
+}
