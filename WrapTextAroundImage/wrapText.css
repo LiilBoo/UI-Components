@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+body {
+    background-color: #3264fe ;
+    padding: 20px;
+}
+p {
+    color: #d5d5d5;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+img{
+    float: left;
+    shape-outside: url('phone-chess-r51nhqzu09hu8cm7ejmbc.png');
+    margin-top: 150px;
+    shape-margin: 15px;
+}
+
+img:nth-child(2) {
+    
+    height: 150px;
+    float:right;
+    shape-outside: url('phone-chess-r51nhqzu09hu8cm7ejmbc.png');
+    margin-top: 500px;
+    shape-margin: 50px;
+    border-radius: 8px;
+}
