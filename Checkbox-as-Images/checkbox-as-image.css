@@ -1,0 +1,85 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+*,::before,::after {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ user-select: none;
+}
+
+body {
+    background: #eef5ff;
+}
+
+.wrapper {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: grid;
+    place-items: center;
+    gap: 15px;
+}
+
+.container {
+    height: 200px;
+    width: 200px;
+    background: #ffffff;
+    box-shadow: 0 0 25px rgba(17, 1, 68, 0.08);
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    
+    position: relative;
+    width: 100%
+}
+
+input[type="checkbox"]::after {
+    position: absolute;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400;
+    font-size: 18px;
+    content: "\f111";
+    color: #478bfb;
+    right: 10px;
+    top: -5px;
+}
+
+
+input[type="checkbox"]:checked::after {
+    font-weight: 900;
+    content: "\f058";
+}
+
+img {
+    width: 70%;
+    position: absolute;
+    margin: auto;
+    object-fit: cover;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 950px) {
+    .wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .container {
+        height: 300px;
+        width: 300px;
+    }
+
+    input[type="checkbox"]{
+        font-size: 22px;
+    }
+}
