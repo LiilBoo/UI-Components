@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+*,::before,::after {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ user-select: none;
+}
+
+*:not(i){
+    font-family: 'Poppins', sans-serif;
+}
+
+
+html {
+ font-size: 62.5%;
+ scroll-behavior: smooth;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+:root {
+
+    --whiteShade1: #ffffff;
+    --whiteShade2: #f8fafb;
+    --blackShade1: #231c3d;
+    --blackShade2: #575a7b;
+
+    --baseFontSize: 1.6rem;
+
+    --headingFontSize1: 4rem;
+    --headingFontSize2: 3.2rem;
+    --headingFontSize3: 2rem;
+    --headingFontSize4: 1.8rem;
+
+    --borderRadius1: 1rem;
+    --borderRadius2: 0.5rem;
+
+    --rgba: ;
+ }
+
+img, picture {
+ max-width: 100%;
+ display: block;
+}
+
+
+body {
+    background-color: #333;
+}
+
+.btn {
+    padding: 12px 30px;
+    background: #f1f1f1;
+    width: 100px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    margin: 50px auto 0px auto;
+}
+
+.box {
+    margin: 100px auto;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.animate {
+    background-color: salmon;
+    width: 200px;
+    height: 100px;
+    transform: rotate(720deg);
+    transition: 
+    background-color 0.5s 0s,
+    height           0.5s 0.5s,
+    width            0.5s 1s,
+    transform        0.5s 1.5s;
+}
+
+.txt {
+    font-size: 20px;
+    color: #f1f1f1;
+    transform: translateX(400px);
+}
+
+.animate-P {
+    transition: transform 0.5s 2s ease-in;
+    transform: translateX(0px);
+}
