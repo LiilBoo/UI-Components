@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*,::before,::after {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ user-select: none;
+}
+
+*:not(i){
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f2f2f2;
+}
+
+.main-content {
+    padding: 3vw 5vw 5vw;
+
+}
+
+h1 {
+    font-size: clamp(25 7vw, 70px);
+}
+
+/*The span after the h1*/
+
+h1 + span {
+font-size: clamp(25 7vw, 70px);
+}
+
+.slideshow-container {
+    position: relative;
+    margin-top: 4vw;
+    overflow: hidden;
+    min-height: 60vmin;
+    cursor: grab;
+}
+
+.slideshow-container:active {
+    cursor: grabbing;
+}
+
+.slideshow {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    pointer-events: none;
+}
+
+.slide {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    flex-shrink : 0;
+    height: 100%;
+    width: 80vmin;
+    color: #ffffff;
+}
+
+.slide:not(:nth-child(1)){
+    margin-left: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.15);
+}
+
+.slide h2, .slide a {
+    text-shadow: 0 0 5px rgba(0,0,0,0.39);
+}
+
+.slide h2 {
+    position: absolute;
+    top: clamp(10px, 2vw, 20px);
+    left: clamp(10px, 2vw, 20px);
+    font-size: clamp(20px 3vw 40px);
+    font-weight: 600;
+}
+.slide a {
+    position: absolute;
+    bottom: clamp(10px, 2vw, 20px);
+    right: clamp(10px, 2vw, 20px);
+    font-size: clamp(16px 3vw 20px);
+    font-weight: 400;
+    color: #f1f1f1;
+    pointer-events: auto;
+}
+
+.s1 {
+    background-image: url("Assets/Chess-trafalgarBlackPieces.jpg")
+}
+
+.s2 {
+    background-image: url("Assets/newLogo.png");
+}
+.s3 {
+    background-image: url("Assets/Chess-StylishChessboard.jpg");
+}
+.s4 {
+    background-image: url("Assets/Chess-tournamentExemple.jpg");
+}
+.s5 {
+    background-image: url("Assets/Chess-shannon-potter-unsplash.jpg");
+}
