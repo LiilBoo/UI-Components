@@ -1,0 +1,32 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	user-select: none;
+}
+
+*:not(i) {
+	font-family: "Poppins", sans-serif;
+}
+
+picture {
+	width: 400px;
+	height: 600px;
+	margin: 50px auto;
+}
+
+img {
+	width: 400px;
+	height: 600px;
+	object-fit: cover;
+	display: block;
+	margin: 50x auto;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #323232;
+	}
+}
