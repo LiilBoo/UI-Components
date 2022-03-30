@@ -1,0 +1,87 @@
+*,::before,::after {
+box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #380038;
+    overflow: hidden;
+}
+
+.circle1 {
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    background: linear-gradient(#043769,#05c46b);
+    top: -30%;
+    left: -10%;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.circle2 {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(#3c40c6,#172d35);
+    top: 40%;
+    left: 50%;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.card {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    height: 600px;
+    width: 300px;
+    background-color: rgba(253, 253, 253, 0.219);
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px rgb(39, 39, 39);
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    z-index: 10;
+    backdrop-filter: blur(5px); /**Glassmorphism effect is here*/
+
+
+}
+
+img {
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255  ,0.397);
+    margin-top: 5px;
+}
+
+p {
+    position: absolute;
+    top: 19%;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+h2 {
+    height: 40px;
+    width: 140px;
+    background: white ;
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
