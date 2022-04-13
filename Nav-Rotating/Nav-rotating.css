@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+*,::before,::after {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ user-select: none;
+}
+
+*:not(i){
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --baseShade1: #0E2A53;
+    --baseShade2: #005682;
+    --baseShade3: #008599;
+    --baseShade4: #458084;
+    --baseShade5: #006C82;
+    --baseShade6: #00A2B7;
+
+    --blueShade1: #0E2A53;
+    --blueShade2: #3C4F7C;
+    --blueShade3: #6677A7;
+    --blueShade4: #92A2D5;
+    --blueShade5: #BFCFFF;
+
+    --redShade1: #AB0C12;
+    --redShade2: #D43C2F;
+    --redShade3: #FD614D;
+    --redShade4: #FF856C;
+    --redShade5: #FFA98D;
+
+    --whiteClub1: #CECECE;
+    --whiteClub2:#B4B7BC;
+    --whiteClub3: #96A1A9;
+    --whiteClub4: #768D93;
+    --whiteClub5: #F7F7F7;
+
+    --whiteShade1: #ffffff;
+    --whiteShade2: #f8fafb;
+    --blackShade1: #231c3d;
+    --blackShade2: #575a7b;
+
+    --baseFontSize: 1.6rem;
+
+    --headingFontSize1: 4rem;
+    --headingFontSize2: 3.2rem;
+    --headingFontSize3: 2rem;
+    --headingFontSize4: 1.8rem;
+
+    --borderRadius1: 1rem;
+    --borderRadius2: 0.5rem;
+
+    --rgba: ;
+}
+
+.dark:root {
+    --baseShade1: #5F7ADB;
+    --baseShade2: #A2B2EE;
+    --baseShade3: #3E60BD;
+    --baseShade4: #1047A0;
+    --baseShade5: #003083;
+    --baseShade6: #4A69C7;
+
+    --blueShade1: #0E2A53;
+    --blueShade2: #3C4F7C;
+    --blueShade3: #6677A7;
+    --blueShade4: #92A2D5;
+    --blueShade5: #BFCFFF;
+
+    --redShade1: #AB0C12;
+    --redShade2: #D43C2F;
+    --redShade3: #FD614D;
+    --redShade4: #FF856C;
+    --redShade5: #FFA98D;
+
+    --whiteClub1: #CECECE;
+    --whiteClub2:#B4B7BC;
+    --whiteClub3: #96A1A9;
+    --whiteClub4: #768D93;
+    --whiteClub5: #F7F7F7;
+
+    --whiteShade1: #F7F7F7;
+    --whiteShade2: #f8fafb;
+    --blackShade1: #26292B;
+    --blackShade2: #2E3239;
+    --blackShade3: #1A1C22;
+    --blackShade4: #3D3A50;
+
+    --hotBlakShade: #503A3A;
+    --darkRed: #F65151;
+
+}
+
+html {
+ font-size: 62.5%;
+ scroll-behavior: smooth;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+
+img, picture {
+ max-width: 100%;
+ display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+    --baseShade1: #5F7ADB;
+    --baseShade2: #A2B2EE;
+    --baseShade3: #3E60BD;
+    --baseShade4: #1047A0;
+    --baseShade5: #003083;
+    --baseShade6: #4A69C7;
+    
+    --blueShade1: #0E2A53;
+    --blueShade2: #3C4F7C;
+    --blueShade3: #6677A7;
+    --blueShade4: #92A2D5;
+    --blueShade5: #BFCFFF;
+
+    --redShade1: #AB0C12;
+    --redShade2: #D43C2F;
+    --redShade3: #FD614D;
+    --redShade4: #FF856C;
+    --redShade5: #FFA98D;
+    
+    --whiteClub1: #CECECE;
+    --whiteClub2:#B4B7BC;
+    --whiteClub3: #96A1A9;
+    --whiteClub4: #768D93;
+    --whiteClub5: #F7F7F7;
+
+    --whiteShade1: #F7F7F7;
+    --whiteShade2: #f8fafb;
+    --blackShade1: #26292B;
+    --blackShade2: #2E3239;
+    --blackShade3: #1A1C22;
+    --blackShade4: #3D3A50;
+    
+    --hotBlakShade: #503A3A;
+    --darkRed: #F65151;
+ }
+}
+
+/*!UNPRATICAL CSS MESS FROM YOUTUBER WHO CANT CENTER A DIV*/
+
+body {
+    overflow: hidden;
+    background: linear-gradient(
+        to right,
+        black,
+        #0abfbc  );
+}
+
+.menu-toggler {
+    opacity: 0;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,300%);
+}
+
+.menu-toggler+label {
+    width: 40px;
+    height: 5px;
+    display: block;
+    z-index: 1;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.7);
+    transition: 0.5s;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.menu-toggler+label::after,
+.menu-toggler+label::before {
+    width: 40px;
+    height: 5px;
+    display: block;
+    z-index: 1;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.7);
+    transition: 0.5s;
+    content: "";
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+.menu-toggler+label::after {
+    transform: translateY(-170%);
+}
+.menu-toggler+label::before {
+    transform: translateY(170%);
+}
+
+.menu-item i {
+    display: block;
+    line-height: 80px;
+    color: lightgrey;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 40px;
+    pointer-events: none;
+    transition: 0.2s;
+}
+
+.menu-item {
+    position: absolute;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.menu-toggler:checked+label {
+    background: transparent;
+}
+
+.menu-toggler:checked+label::before,
+.menu-toggler:checked+label::after {
+    
+    width: 40px;
+    transform-origin: 50% 50%;
+}
+
+.menu-toggler:checked+label::before {
+    transform: rotate(45deg);
+}
+.menu-toggler:checked+label::after {
+    transform: rotate(-45deg);
+}
+
+.menu-toggler:checked~ul .menu-item {
+    opacity: 1;
+}
+
+.menu-toggler:checked~ul .menu-item:nth-child(1) {
+    transform: rotate(0deg) translateX(-110px);
+}
+.menu-toggler:checked~ul .menu-item:nth-child(2) {
+    transform: rotate(60deg) translateX(-110px);
+}
+.menu-toggler:checked~ul .menu-item:nth-child(3) {
+    transform: rotate(120deg) translateX(-110px);
+}
+.menu-toggler:checked~ul .menu-item:nth-child(4) {
+    transform: rotate(180deg) translateX(-110px);
+}
+.menu-toggler:checked~ul .menu-item:nth-child(5) {
+    transform: rotate(240deg) translateX(-110px);
+}
+.menu-toggler:checked~ul .menu-item:nth-child(6) {
+    transform: rotate(300deg) translateX(-110px);
+}
+
+.menu-item:nth-child(1) i {
+    transform: rotate(0deg);
+}
+.menu-item:nth-child(2) i {
+    transform: rotate(-60deg);
+}
+.menu-item:nth-child(3) i {
+    transform: rotate(-120deg);
+}
+.menu-item:nth-child(4) i {
+    transform: rotate(-180deg);
+}
+.menu-item:nth-child(5) i {
+    transform: rotate(-240deg);
+}
+.menu-item:nth-child(6) i {
+    transform: rotate(-300deg);
+}
+
+.menu-item:hover {
+    background: black;
+    border-radius: 50%;
+}
