@@ -1,0 +1,52 @@
+*,::before,::after { 
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ font-family: "Poppins", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+    --percent-blue: #008fff;
+}
+
+h1 {
+    color: var(--percent-blue);
+    font-size: 15vmin;
+    text-align: center;
+    padding: 30px 0;
+}
+p {
+    font-size: 3vmin; 
+    line-height: 2em;
+    letter-spacing: 0.05em;
+    text-align: justify;
+    margin: 50px 0;
+    padding: 0 30px;
+}
+#progress{
+    height: 70px;
+    width: 70px;
+
+    border-radius: 50%;
+    position: fixed;
+
+    bottom: 20px;
+    right: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+    display: grid;
+    place-items: center;
+}
+#progress-value{
+    display: block;
+    height: calc(100% - 15px );
+    width: calc(100% - 15px );
+    background-color: #ffffff;
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+    font-weight: 500;
+}
