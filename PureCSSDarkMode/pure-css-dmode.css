@@ -1,0 +1,60 @@
+*,::before,::after {
+box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+body {
+    margin:0;
+    padding: 0;
+    background: blanchedalmond;
+}
+
+.check {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+
+}
+
+
+input[type="checkbox"] {
+    height: 50px;
+    width: 70px;
+    border-radius: 30px ; /**Shall work later*/
+    -webkit-appearance: none; /**important process; removes default appearance*/
+    outline: none;
+    background: white;
+    transition: 0.6s ease;
+    cursor: pointer;
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.50), 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+
+input[type="checkbox"]:checked {
+    background: rgb(61, 61, 61);
+    box-shadow: -1000px 1000px 0 1600px rgb(0, 0, 0)
+}
+
+input[type="checkbox"]::after {
+    content: '\f185';
+    font-family: FontAwesome;
+    font-size: 30px;
+    font-weight: 800;
+    color: black;
+    position: absolute;
+    top: 7px;
+    left: 30px;
+
+}
+
+input[type="checkbox"]:checked::after {
+    content: '\f236';
+    font-family: FontAwesome;
+    font-size: 30px;
+    font-weight: 800;
+    color: white;
+    position: absolute;
+    top: 7px;
+    left: 30px;
+
+}
